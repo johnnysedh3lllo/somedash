@@ -3,11 +3,11 @@
 :root {
   color-scheme: light dark;
 
-  &:has([data-toggle="false"]) {
-    color-scheme: light dark;
+  &:has([data-theme="light"]) {
+    color-scheme: light;
   }
 
-  &:has([data-toggle="true"]) {
+  &:has([data-theme="dark"]) {
     color-scheme: dark;
   }
 
@@ -102,7 +102,7 @@ body {
   cursor: pointer;
 }
 
-.theme-toggle__btn:has([data-toggle="true"]) {
+.theme-toggle__btn:has([data-theme="dark"]) {
   background: var(--clr-toggle-gradient);
 }
 
@@ -127,6 +127,6 @@ body {
   width: var(--toggle-switch-width);
 }
 
-.theme-toggle__btn__switch-wrapper:has([data-toggle="true"]) {
+.theme-toggle__btn__switch-wrapper:has([data-theme="dark"]) {
   width: 100%;
 }
