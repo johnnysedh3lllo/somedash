@@ -5,16 +5,16 @@ const toggleSwitch = document.querySelector(".theme-toggle__btn__switch");
 
 const colorScheme = window.matchMedia("(prefers-color-scheme: light)");
 
-const toggleTheme = (match: boolean) => {
+const toggleTheme = (match) => {
   toggleSwitch?.setAttribute("data-toggle", match ? "false" : "true");
 };
 
-colorScheme.addEventListener("change", (e: MediaQueryListEvent) => {
+colorScheme.addEventListener("change", (e) => {
   const isLight = e.matches;
   toggleTheme(isLight);
 });
 
-let isClicked: boolean = false;
+let isClicked = false;
 toggleBtn?.addEventListener("click", () => {
   isClicked = !isClicked;
   toggleTheme(!isClicked);
