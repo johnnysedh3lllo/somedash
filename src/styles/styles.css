@@ -69,6 +69,7 @@ body {
     font-size: var(--fs-800);
   }
   & p {
+    color: var(--clr-txt-primary);
     font-size: var(--fs-200);
     font-weight: var(--fw-700);
     letter-spacing: 0.125px;
@@ -82,6 +83,7 @@ body {
   border-block-start: 1px solid var(--clr-txt-primary);
   padding-block: 1rem;
   & p {
+    color: var(--clr-txt-primary);
     font-size: var(--fs-200);
     font-weight: var(--fw-700);
     letter-spacing: 0;
@@ -95,9 +97,13 @@ body {
   padding: 0.2rem;
   border-radius: 1rem;
   background: var(--clr-toggle);
-  /* transition: all var(--transition-duration); */
+  transition: all var(--transition-duration);
   position: relative;
   cursor: pointer;
+}
+
+.theme-toggle__btn:has([data-toggle="true"]) {
+  background: var(--clr-toggle-gradient);
 }
 
 .theme-toggle__btn__switch {
@@ -123,8 +129,4 @@ body {
 
 .theme-toggle__btn__switch-wrapper:has([data-toggle="true"]) {
   width: 100%;
-}
-
-.theme-toggle__btn:has([data-toggle="true"]) {
-  background: var(--clr-toggle-gradient);
 }
