@@ -1,0 +1,119 @@
+@import "reset.css";
+
+:root {
+  color-scheme: light dark;
+
+  &:has([data-toggle="false"]) {
+    color-scheme: light dark;
+  }
+
+  &:has([data-toggle="true"]) {
+    color-scheme: dark;
+  }
+
+  --clr-toggle-gradient: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-toggle: hsl(230, 22%, 74%);
+  --clr-bg: light-dark(var(--clr-white), hsl(230, 17%, 14%));
+  --clr-bg-pattern: light-dark(hsl(225, 100%, 98%), hsl(232, 19%, 15%));
+  --clr-bg-card: light-dark(hsl(227, 47%, 96%), hsl(228, 28%, 20%));
+  --clr-txt-primary: light-dark(hsl(228, 34%, 66%), hsl(228, 12%, 44%));
+  --clr-txt-secondary: light-dark(var(--clr-white), hsl(230, 17%, 14%));
+  --clr-green-lime: hsl(163, 72%, 41%);
+  --clr-red-bright: hsl(356, 69%, 56%);
+
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-800: 1.5rem;
+  --fs-1600: 2.5rem;
+  --fs-3200: 3.5rem;
+
+  --ff-primary: "Inter", serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-bg);
+  transition: background 1s;
+
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.dashboard {
+  padding: 2.125rem 1.575rem;
+  letter-spacing: 0.35px;
+}
+
+.dashboard__top__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard__top__header__text-block {
+  line-height: 1.4;
+  & h1 {
+    font-size: var(--fs-800);
+  }
+  & p {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-700);
+    letter-spacing: 0.125px;
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-start: 1px solid var(--clr-txt-primary);
+  padding-block: 1rem;
+  & p {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-700);
+    letter-spacing: 0;
+  }
+}
+
+.theme-toggle__btn {
+  border: 0;
+  width: 3rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  background: var(--clr-toggle);
+  /* transition: all 0.2s; */
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-toggle__btn__switch {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  background: var(--clr-white);
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: all 1s;
+  border-radius: 100%;
+}
+
+[data-toggle="false"] {
+  left: 0.2rem;
+}
+
+.theme-toggle__btn:has([data-toggle="true"]) {
+  background: var(--clr-toggle-gradient);
+}
