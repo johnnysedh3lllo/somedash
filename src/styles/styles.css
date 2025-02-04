@@ -40,14 +40,16 @@
   --ff-primary: "Inter", serif;
   --fw-400: 400;
   --fw-700: 700;
+
+  --toggle-switch-width: 1.1rem;
+  --transition-duration: 0.4s;
 }
 
 body {
   font-family: var(--ff-primary);
   background-color: var(--clr-bg);
-  transition: background 1s;
-
-  transition: color 0.4s, background-color 0.4s;
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration);
 }
 
 .dashboard {
@@ -93,25 +95,34 @@ body {
   padding: 0.2rem;
   border-radius: 1rem;
   background: var(--clr-toggle);
-  /* transition: all 0.2s; */
+  /* transition: all var(--transition-duration); */
   position: relative;
   cursor: pointer;
 }
 
 .theme-toggle__btn__switch {
-  position: absolute;
+  /* position: absolute; */
+  transition: all var(--transition-duration);
   top: 0.2rem;
-  right: 0.2rem;
+  /* right: 0.2rem; */
+  left: 0.2rem;
   bottom: 0.2rem;
   background: var(--clr-white);
   width: 1.1rem;
   height: 1.1rem;
-  transition: all 1s;
   border-radius: 100%;
 }
 
-[data-toggle="false"] {
-  left: 0.2rem;
+.theme-toggle__btn__switch-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  transition: all var(--transition-duration);
+  width: var(--toggle-switch-width);
+}
+
+.theme-toggle__btn__switch-wrapper:has([data-toggle="true"]) {
+  width: 100%;
 }
 
 .theme-toggle__btn:has([data-toggle="true"]) {
