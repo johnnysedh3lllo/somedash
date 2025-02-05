@@ -23,7 +23,7 @@
   --clr-bg: light-dark(var(--clr-white), hsl(230, 17%, 14%));
   --clr-bg-pattern: light-dark(hsl(225, 100%, 98%), hsl(232, 19%, 15%));
   --clr-bg-card: light-dark(hsl(227, 47%, 96%), hsl(228, 28%, 20%));
-  --clr-txt-primary: light-dark(hsl(228, 34%, 66%), hsl(228, 12%, 44%));
+  --clr-txt-primary: light-dark(hsl(228, 12%, 44%), hsl(228, 34%, 66%));
   --clr-txt-secondary: light-dark(var(--clr-white), hsl(230, 17%, 14%));
   --clr-green-lime: hsl(163, 72%, 41%);
   --clr-red-bright: hsl(356, 69%, 56%);
@@ -52,6 +52,46 @@ body {
     background-color var(--transition-duration);
 }
 
+.card__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--clr-bg-card);
+}
+
+.card__main__head__name {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-100);
+  color: var(--clr-txt-primary);
+}
+
+.card__main__body__heading {
+  font-size: var(--fs-3200);
+}
+
+.card__main__body__par {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: var(--fs-100);
+  color: var(--clr-txt-primary);
+  color: var(--clr-txt-secondary);
+}
+
+.card__main__foot {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-100);
+}
+
+.incline {
+  color: var(--clr-green-lime);
+}
+
+.decline {
+  color: var(--clr-red-bright);
+}
+
 .dashboard {
   padding: 2.125rem 1.575rem;
   letter-spacing: 0.35px;
@@ -74,6 +114,13 @@ body {
     font-weight: var(--fw-700);
     letter-spacing: 0.125px;
   }
+}
+
+.dashboard__top__section {
+  padding-block: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .theme-toggle {
