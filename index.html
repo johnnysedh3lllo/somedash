@@ -21,7 +21,9 @@
   <title>SoMe Dash</title>
 </head>
 
-<body>
+<body class="body transition">
+  <div class="banner transition">
+  </div>
   <main class="dashboard">
     <div class="dashboard__top">
       <header class="dashboard__top__header">
@@ -43,63 +45,72 @@
 
       <section class="dashboard__top__section" aria-label="Social Media Statistics">
         <!-- CARD -->
-        <div class="card">
-          <article class="card__main">
+        <div class="card card--facebook">
+          <article class="card__main transition">
             <div class="card__main__head">
-              <img src="" alt="" />
-              <p class="card__main__head__name">@nathanf</p>
+              <img width="20" height="20" src="/src/images/icon-facebook.svg" alt="" />
+              <p class="card__main__head__name"> @nathanf</p>
             </div>
             <section class="card__main__body">
               <h2 class="card__main__body__heading">1987</h2>
               <p class="card__main__body__par">Followers</p>
             </section>
 
-            <p class="card__main__foot">12 Today</p>
+            <p class="card__main__foot incline"><img width="8" height="4" src="src/images/icon-up.svg" alt="">12 Today
+            </p>
           </article>
         </div>
 
         <!-- CARD -->
-        <div>
-          <article class="card__main">
+        <div class="card card--twitter">
+          <article class="card__main transition">
             <div class="card__main__head">
-              <img src="" alt="" />
+              <img src="/src/images/icon-twitter.svg" width="20" height="17" alt="" />
               <p class="card__main__head__name">@nathanf</p>
             </div>
             <section class="card__main__body">
               <h2 class="card__main__body__heading">1044</h2>
               <p class="card__main__body__par">Followers</p>
             </section>
-            <p class="card__main__foot">99 Today</p>
+            <p class="card__main__foot incline">
+              <img width="8" height="4" src="src/images/icon-up.svg" alt="">99 Today
+            </p>
           </article>
         </div>
 
         <!-- CARD -->
-        <div>
-          <article class="card__main">
+        <div class="card card--instagram">
+          <article class="card__main transition">
             <div class="card__main__head">
-              <img src="" alt="" />
+              <img src="/src/images/icon-instagram.svg" width="20" height="20" alt="" />
               <p class="card__main__head__name">@realnathanf</p>
             </div>
             <section class="card__main__body">
               <h2 class="card__main__body__heading">11k</h2>
               <p class="card__main__body__par">Followers</p>
             </section>
-            <p class="card__main__foot">1099 Today</p>
+            <p class="card__main__foot incline">
+              <img width="8" height="4" src="src/images/icon-up.svg" alt="">
+              1099 Today
+            </p>
           </article>
         </div>
 
         <!-- CARD -->
-        <div>
-          <article class="card__main">
+        <div class="card card--youtube">
+          <article class="card__main transition">
             <div class="card__main__head">
-              <img src="" alt="" />
+              <img width="20" height="20" src="/src/images/icon-youtube.svg" width="20" height="20" alt="" />
               <p class="card__main__head__name">Nathan F.</p>
             </div>
             <section class="card__main__body">
               <h2 class="card__main__body__heading">8239</h2>
               <p class="card__main__body__par">Subscribers</p>
             </section>
-            <p class="card__main__foot">144 Today</p>
+            <p class="card__main__foot decline">
+              <img width="8" height="4" src="src/images/icon-down.svg" alt="">
+              144 Today
+            </p>
 
           </article>
         </div>
@@ -109,101 +120,102 @@
     </div>
 
     <div class="dashboard__bottom">
-      <h2>Overview - Today</h2>
-      <section>
+      <h2 class="dashboard__bottom__heading transition">Overview - Today</h2>
+
+      <section class="dashboard__bottom__section">
         <!--Card-->
-        <article>
-          <section>
-            <h2>Page Views</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Page Views</h2>
+            <img src="/src/images/icon-facebook.svg" width="20" height="20" alt="" />
           </section>
-          <div>
-            <p>87</p>
-            <p>3%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">87</p>
+            <p class="card--small__bottom__par incline"><img src="/src/images/icon-up.svg" alt=""> 3%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Likes</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Likes</h2>
+            <img src="/src/images/icon-facebook.svg" width="20" height="20" alt="" />
           </section>
-          <div>
-            <p>52</p>
-            <p>2%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">52</p>
+            <p class="card--small__bottom__par decline"><img src="/src/images/icon-down.svg" alt=""> 2%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Likes</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Likes</h2>
+            <img src="/src/images/icon-instagram.svg" width="20" height="20" alt="" />
           </section>
-          <div>
-            <p>5462</p>
-            <p>2257%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">5462</p>
+            <p class="card--small__bottom__par incline"><img src="/src/images/icon-up.svg" alt=""> 2257%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Profile Views</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Profile Views</h2>
+            <img src="/src/images/icon-instagram.svg" width="20" height="20" alt="" />
           </section>
-          <div>
-            <p>52k</p>
-            <p>1375%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">52k</p>
+            <p class="card--small__bottom__par incline"><img src="/src/images/icon-up.svg" alt=""> 1375%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Retweets</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Retweets</h2>
+            <img src="/src/images/icon-twitter.svg" alt="" width="20" height="17" />
           </section>
-          <div>
-            <p>117</p>
-            <p>303%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">117</p>
+            <p class="card--small__bottom__par incline"><img src="/src/images/icon-up.svg" alt=""> 303%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Likes</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Likes</h2>
+            <img src="/src/images/icon-twitter.svg" alt="" width="20" height="17" />
           </section>
-          <div>
-            <p>507</p>
-            <p>553%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">507</p>
+            <p class="card--small__bottom__par incline"><img src="/src/images/icon-up.svg" alt=""> 553%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Likes</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Likes</h2>
+            <img src="/src/images/icon-youtube.svg" width="20" height="20" alt="" />
           </section>
-          <div>
-            <p>107</p>
-            <p>19%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">107</p>
+            <p class="decline"><img src="/src/images/icon-down.svg" alt=""> 19%</p>
           </div>
         </article>
 
         <!--Card-->
-        <article>
-          <section>
-            <h2>Total Views</h2>
-            <img src="" alt="" />
+        <article class="card--small transition">
+          <section class="card--small__top">
+            <h2 class="card--small__top__heading transition">Total Views</h2>
+            <img src="/src/images/icon-youtube.svg" width="20" height="20" alt="" />
           </section>
-          <div>
-            <p>1407</p>
-            <p>12%</p>
+          <div class="card--small__bottom">
+            <p class="card--small__bottom__heading transition">1407</p>
+            <p class="decline"><img src="/src/images/icon-down.svg" alt=""> 12%</p>
           </div>
         </article>
       </section>
